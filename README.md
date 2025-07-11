@@ -67,5 +67,5 @@ Website Development/
 📩 chadubula.vani@gmail.com
 
 **🔗 Project Link**
-https://github.com/ChadubulaVani/Web-Developement.git
+https://github.com/ChadubulaVani/coursehub-site.git
 
