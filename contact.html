@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - CourseHub</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <script defer src="./javascript/main.js"></script>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo-container">
+          <img
+            src="https://i.pinimg.com/736x/6c/b7/75/6cb775190f3d107fe514d2c2ff527cd3.jpg"
+            alt="Logo"
+            class="logo"
+          />
+          <h1 class="brand-name">CourseHub</h1>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="banner">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to reach out? Fill in the form below.</p>
+      </section>
+
+      <section>
+        <form class="courses1">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea
+          ><br /><br />
+
+          <h1><button type="submit">Send Message</button></h1>
+        </form>
+        <p id="msg" style="color: green; font-weight: bold"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 CourseHub. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

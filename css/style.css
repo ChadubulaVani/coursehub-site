@@ -1,0 +1,307 @@
+/*Global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+/*Navbar*/
+
+.navbar {
+  background-color: #005f73;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.brand-name {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.theme-btn {
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 8%;
+  border: 5px rgb(0, 0, 0) solid;
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  text-decoration: underline;
+}
+
+.banner {
+  background: linear-gradient(to right, #0a9396, #94d2bd);
+  color: rgb(0, 0, 0);
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 22px;
+}
+
+#heading {
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.881);
+  width: 450px;
+  border: solid 5px rgb(0, 0, 0);
+  border-radius: 2%;
+  margin-left: 520px;
+}
+
+.courses {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.courses li {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.courses table {
+  width: 180%;
+  height: 50%;
+  text-align: center;
+  color: #000000;
+  font-size: 18px;
+}
+
+.course-card {
+  background-color: #fff;
+  border-left: 5px solid #005f73;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.03);
+}
+
+form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #005f73;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+form button:hover {
+  background-color: #0a9396;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #005f73;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0a9396;
+}
+
+.footer {
+  background-color: #005f73;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Adding Responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .banner {
+    padding: 2rem 1rem;
+    font-size: 90%;
+  }
+
+  .courses {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .course-card {
+    font-size: 90%;
+  }
+
+  form {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+  }
+}
+
+#scrollBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+#scrollBtn:hover {
+  background-color: #ff0000;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+}
+body.dark-mode .footer {
+  background-color: #333;
+}
+
+body.dark-mode .banner {
+  background: linear-gradient(to right, #444, #666);
+  color: white;
+}
+
+body.dark-mode #heading {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  width: 450px;
+  border: solid 5px rgb(255, 244, 244);
+  border-radius: 2%;
+}
+
+body.dark-mode .course-card,
+body.dark-mode form {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+.courses1 {
+  color: rgb(0, 0, 0);
+  border: solid 5px black;
+  font-size: 20px;
+}
